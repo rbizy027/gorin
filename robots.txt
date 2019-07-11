@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: http://xn---3-glc4bem4c4ab.xn--p1ai/sitemap.xml
+Host: http://xn---3-glc4bem4c4ab.xn--p1ai/

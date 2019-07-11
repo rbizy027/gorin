@@ -1,0 +1,7 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /
+
+# Редирект www.site.ru -> site.ru
+	RewriteCond %{HTTP_HOST} !^xn---3-glc4bem4c4ab\.xn--p1ai$ [NC]
+	RewriteRule ^(.*)$ http://xn---3-glc4bem4c4ab.xn--p1ai/ [R=301,L]
