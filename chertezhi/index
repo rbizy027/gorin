@@ -1,0 +1,623 @@
+<?php
+    require_once("../ipgeobase/ipgeobase.php");
+    $gb = new IPGeoBase();
+    //$ip = '62.133.160.0';
+    $ip = $_SERVER['REMOTE_ADDR'];
+    $data = $gb->getRecord($ip);
+
+    $cityes = array('Челябинск' => 'second', 'Новосибирск' => 'first', 'Нижний Новгород' => 'third', 'Уфа' => 'fourth');
+    $city_class = isset($cityes[$data['city']]) ? $cityes[$data['city']] : 'fourth';
+    $contact_classes = array('first' => 'map1', 'second' => 'map2', 'third' => 'map3', 'fourth' => 'map4');
+    $contact_class = 'phone-info '. $contact_classes[$city_class];
+    //die($city_class);
+?>
+
+<!DOCTYPE html>
+<!--[if IE 7 ]><html class="ie ie7 no-js"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8 no-js"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js"> <!--<![endif]-->
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MFMCLH8');</script>
+  <!-- End Google Tag Manager -->
+    <!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8" />
+	<title>ЧЕРТЕЖИ печи для бани Горыныч-3 👍 Схема банной печи, скачать чертеж | Термосфера</title>
+	<meta name="description" content="Скачать чартеж печи для бани Горыныч-3 с официального сайта! Инструкция со схемой монтажа печи от производителя Термосфера. Смотрите сами!" />
+	
+    <meta content="width=1024, minimum-scale= 0.1, maximum-scale=1.0 " name="viewport" />
+
+    <!-- CSS
+  ================================================== -->
+    <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/css/fixes.css" rel="stylesheet" type="text/css" />
+    <!-- JS
+  ================================================== -->
+    <script src="/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+
+    <!-- bxSlider -->
+    <script src="/js/jquery.bxslider.min.js"></script>
+    <link href="/css/jquery.bxslider.css" rel="stylesheet" />
+
+    <!-- fancyBox -->
+    <script type="text/javascript" src="/js/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="/js/jquery.inputmask.js"></script>
+	<link rel="stylesheet" href="/css/jquery.fancybox.css" media="screen"/>
+
+    <!-- bPopUp-->
+    <link type="text/css" rel="stylesheet" media="screen" href="/css/modals.css" />
+    <script src="/js/jquery.bpopup.min.js" type="text/javascript"></script>
+    <script>
+        $(function() {
+            $('#input-phone').inputmask('9(999)999-99-99');
+            $('.phone-info').attr('class', '<?php echo $contact_class?>')
+            $('.map1').find('.map_location').hide();
+            $('.map1').find('.adress').hide();
+            $('.map1').find('.phone-info').hide();
+            <?  if(isset($cityes[$data['city']])): ?>
+                $('.map1').find('.map_location.<?php echo $city_class?>').show();
+                $('.map1').find('.adress.<?php echo $city_class?>').show();
+            <? else: ?>
+                $('.map1').find('.map_location.fourth').show();
+                $('.map1').find('.adress.fourth').show();
+            <? endif ?>
+        })
+    </script>
+	<!--<noindex><script async src="data:text/javascript;charset=utf-8;base64,ZnVuY3Rpb24gbG9hZHNjcmlwdChlLHQpe3ZhciBuPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpO24uc3JjPSIvL2xwdHJhY2tlci5ydS9hcGkvIitlO24ub25yZWFkeXN0YXRlY2hhbmdlPXQ7bi5vbmxvYWQ9dDtkb2N1bWVudC5oZWFkLmFwcGVuZENoaWxkKG4pO3JldHVybiAxfXZhciBpbml0X2xzdGF0cz1mdW5jdGlvbigpe2xzdGF0cy5zaXRlX2lkPTI0NTAwO2xzdGF0cy5yZWZlcmVyKCl9O3ZhciBqcXVlcnlfbHN0YXRzPWZ1bmN0aW9uKCl7alFzdGF0Lm5vQ29uZmxpY3QoKTtsb2Fkc2NyaXB0KCJzdGF0c19hdXRvLmpzIixpbml0X2xzdGF0cyl9O2xvYWRzY3JpcHQoImpxdWVyeS0xLjEwLjIubWluLmpzIixqcXVlcnlfbHN0YXRzKQ=="></script></noindex>-->
+	<script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = 'https://vk.com/rtrg?p=VK-RTRG-163320-2qUjJ';</script>
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFMCLH8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="layout">
+    <!-- header -->
+    <header id="main">
+        <div class="header">
+            <div class="limit">
+                <a href="/" class="logo" alt="Печь для бани Горыныч 3 - Термосфера"></a>
+                <div class="call-side">
+                    <div class="phone">
+                        <div class="line uppercase">
+                            <div class="icon"></div>
+                            Контактный телефон
+                        </div>
+                        <!-- <div class="number">8-347-<span>275-09-32</span></div> -->
+						<div class="phone-info map1">  <!-- .map1 .map2 .map3 .map4-->
+							 <!-- <div class="number first">
+								8-800-<span>2009-510</span>
+							</div>
+							<div class="number second">
+								8-800-<span>2009-510</span>
+							</div>
+							<div class="number third">
+								8-800-<span>2009-510</span>
+							</div>
+							<div class="number fourth">
+								<span>8-347-275-09-32</span>
+							</div> -->
+							<div class="number roistat-phone-3"><!--<span class="lptracker_phone"--> 8 (905) 352-00-11</div>
+						</div>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <a href="#" class="button blue" id="callback">перезвоните мне</a>
+                    <div style="clear: both;"></div>
+					<div class="mail">
+						<div class="icon"></div>
+						<div class="uppercase">E-mail:</div>
+						<a href="#">termosfera@inbox.ru</a>
+					</div>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+
+        <!-- block1 -->
+        <div class="block1">
+            <div class="limit">
+                <div class="h1 color-blue">Банная печь Горыныч-3</div>
+                <div class="hr title"></div>
+                <h1 class="teh">Чертежи, схемы, инструкции, видео</h1>
+                <div class="contejner">
+                    <img class="left" src="/images/content/img1.png" alt="img"/>
+                    <img src="/images/content/img2.png" alt="img"/>
+                    <img class="center" src="/images/content/img3.png" alt="img"/>
+                    <div style="clear: both;"></div>
+                </div>
+                <h3 class="b1-ttl">Оставьте заявку, чтобы получить консультацию специалиста</h3>
+                <a href="#" class="button brown" id="gorinich">Оставить заявку</a>
+                <div class="hr"></div>
+				<div class="shipping"><img src="/images/shipping.png"></div>
+            </div>
+        </div>
+        <?/*<div class="bottom-box">
+            <div class="arrow"></div>
+        </div>*/?>
+    </header>
+	
+	<div class="block6 part">           
+        <div class="bottom-box">
+            <div class="arrow"></div>
+        </div>
+    </div>
+	
+    <!-- block9 -->
+    <div class="block9" id="chertezi">
+        <div class="limit">
+            <div class="h1">Вид бани при расположении печи с правой и левой каменкой</div>
+            <div class="hr title"></div>
+            <div class="left">
+                <h2 class="headline">Схема бани при установке печи Горыныч-3</h2>
+                <div class="sub-title">каменка слева</div>
+                <img src="/images/content/img1_block9.png" alt="Схема бани при установке печи Горыныч-3, каменка слева фото"/>
+                <div class="plan-first">
+                    <div class="section first">Парная</div>
+                    <div class="section second">моечное отделение</div>
+                    <div class="section third">Комната отдыха</div>
+                </div>
+				<br>
+				<h2 class="headline">Чертеж печи Горыныч-3, каменка слева</h2>
+				<br>
+				<a href="/images/chertez/full-left.jpg" class="fancybox"><img class="teh-ch" src="/images/chertez/mini-left.jpg" alt="Чертеж печи Горыныч-3, каменка слева фото"/></a>
+            </div>
+            <div class="right">
+                <h2 class="headline">Схема бани при установке печи Горыныч-3</h2>
+                <div class="sub-title">каменка справа</div>
+                <img src="/images/content/img2_block9.png" alt="Схема бани при установке печи Горыныч-3, каменка справа фото"/>
+                <div class="plan-second">
+                    <div class="section first">моечное отделение</div>
+                    <div class="section second">Парная</div>
+                    <div class="section third">Комната отдыха</div>
+                </div>
+				<br>
+				<h2 class="headline">Чертеж печи Горыныч-3, каменка справа</h2>
+				<br>
+				<a href="/images/chertez/full-right.jpg" class="fancybox"><img class="teh-ch" src="/images/chertez/mini-right.jpg" alt="Чертеж печи Горыныч-3, каменка справа фото"/></a>
+            </div>
+			<div style="clear: both;"></div>
+			<br>
+			<div class="teh-text">
+				<p>Топка печи имеет удлиненную сферическую форму, что немало важно для срока службы печей.</p>
+
+				<p>Дымоход состоит из двух колен, огибающих каменку, общая длинна которых 0,9 метра, <br>что увеличивает КПД, и обогрев камней. В торце дымохода расположен вычистной люк. </p>
+
+				<p>Открытая глубокая каменка позволяет вмещать большой объем камней. </p>
+
+				<p>За счет продольного горения (подача воздуха для горения осуществляется впереди, а забор продуктов горения сзади) колосники не нужны для работы печи.</p>
+
+				<p>Под дверкой топки имеется регулятор подачи воздуха.</p>
+			</div>
+			
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+	
+	<!-- block2 -->
+        <div class="block2" id="work">
+            <div class="limit">
+                <br>
+                <h2 class="h1 color-brown">Основной принцип работы печи</h2>
+                <div class="hr title"></div>
+                <h3>Топка расположенна в перегородке между моечной и парной</h3>
+                <div class="contejner">
+                    <div class="left-side">
+                        <div class="title">Помывочное отделение</div>
+                        <img src="/images/content/img4.png" alt="img"/>
+                        обогрев моечной горячим
+                        баком и частью топки выступающей
+                        под баком (полы всегда теплые)
+                    </div>
+                    <div class="center-part">
+                        <h4 class="uppercase" style="font-size: 24px; font-weight: bold;">разрез печи, вид сзади</h4>
+                         <img src="/images/content/img6.png" alt="img"/>
+                         <div class="box">
+                            <img class="seat" src="/images/content/img7.png" alt="img"/>
+                            <div class="title">Комната отдыха</div>
+                            <img class="thermo" src="/images/content/img8.png" alt="img"/>
+                         </div>
+                         различные варианты обогрева<br />
+                         комнаты отдыха<br />
+                         за счет стеклянной дверцы<br />
+                         за счет системы воздушного отопления<br />
+                         за счет металлической дверцы
+                    </div>
+                    <div class="right-side">
+                        <div class="title">Парная</div>
+                        <img src="/images/content/img5.png" alt="img"/>
+                        обогрев парной<br />
+                        каменкой и топкой
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+            <div class="bottom-box">
+                <div class="arrow"></div>
+            </div>
+        </div>
+	
+	<!-- noindex -->
+    <div class="block3">
+        <div class="limit">
+            <div class="h1 color-blue">Преимущества печи Горыныч-3</div>
+            <div class="hr title"></div>
+            <div class="contejner">
+                <div class="left">
+                    <div class="point">
+                        <img src="/images/content/img9.png" alt="img"/>
+                        <div class="title">толщина топки</div>
+                        <div class="sub-title">8мм</div>
+                    </div>
+                    <div class="point point2">
+                        <img src="/images/content/img10.png" alt="img"/>
+                        <div class="title">компактность печи</div>
+                        установленная печь занимает мало пространства<br />
+                        в парной размер каменки 40*70 см.<br />
+                        в моечной бак на стене 30*70
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="point point5">
+                        <img src="/images/content/img13.png" alt="Чертеж Горыныч 3 - вид сбоку"/>
+                        безколосниковый принцип<br />
+                        продольного горения
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="point">
+                        <img src="/images/content/img11.png" alt="img"/>
+                        <div class="title">Срок службы</div>
+                        <div class="sub-title">более 15 лет</div>
+                    </div>
+                    <div class="point point4">
+                        <img src="/images/content/img12.png" alt="img"/>
+                        <div class="title">высокий</div>
+                        <div class="sub-title">кпд</div>
+                        За счет изгибов дымохода<br />
+                        длинной 1 метр<br />
+                        дымовые газы догорают<br />
+                        и прогревают баню и камин
+                    </div>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+    </div>
+	<!-- /noindex -->
+	
+	<div class="block2" id="work">
+		<div class="limit">
+			<br>
+			<h2 class="h1 color-brown">Возможные варианты печей</h2>
+			<br>
+			<br>
+			<div class="columns w-row-var">
+				<div class="w-col-var w-col-4"><img src="/images/teh/5c7412effd081981ea90efb6_pech1-t.png" width="300" alt=""></div>
+				
+				<div class="w-col-var w-col-4"><img src="/images/teh/5c7412ffc6a06561db7e45a2_pech3-t.png" width="300" alt="" class="scheme"></div>
+				
+				<div class="w-col-var w-col-4"><img src="/images/teh/5c74130d33128263273edb44_pech2-t.png" width="300" alt="" class="scheme"></div>
+			</div>
+			<div style="clear: both;"></div>
+			<br>
+			<br>
+			<br>
+			<h3>Технические характеристики печи Горыныч 3</h3>
+			<br>
+			
+			<div class="teh-wrap teh-left">
+                <ul class="list1b li-num1">
+					<li>8-18 м³ в парной и также в моечной</li>
+					<li>Размеры 1000 x 775 x 920 мм (Д*Ш*В)</li>
+					<li>Печь 200 кг / Камни 100 кг</li>
+				</ul>
+            </div>
+            <div class="teh-wrap teh-right">
+               <ul class="list1b li-num2">
+					<li>Бак для воды 100 литров</li>
+					<li>Долговечная стенка в 8 мм</li>
+					<li>Диаметр дымохода 150 мм</li>
+				</ul>
+            </div>
+			<a href="/#cost" class="lnk-btn blue">Выбрать печь</a>
+            <div class="hr"></div>
+		</div>
+		<div class="bottom-box">
+			<div class="arrow"></div>
+		</div>
+	</div>
+	
+
+    <!-- block11 -->
+	<!--noindex-->
+    <div class="block11" id="about-us">
+        <div class="limit">
+            <div class="h1">Отзывы</div>
+            <div class="hr title"></div>
+            <!-- -->
+            <div class="review left-side">
+                <div class="photo"><img src="/images/review/1.png" alt="img"/></div>
+                <div class="name">Анатолий Егоров</div>
+                Печь работает замечательно. Экономия дров однозначно. Вся баня 5*3 м., при этом парная 3*2,5 м. абсолютно прогревается за 2 часа.
+                Бачок с водой прогревается вовремя. Я полностью доволен. Печь сделана очень грамотно.
+                <div class="border"></div>
+            </div>
+            <!-- -->
+            <div class="review right-side">
+                <div class="photo"><img src="/images/review/2.png" alt="img"/></div>
+                <div class="name">Вадим Гильванов</div>
+                В целом все отлично. Быстро греется парная и моечная. Приятно смотреть вечером на камин и слушать потрескивание.
+                Со временем стекло пачкается и его приходиться чистить.  В моечной тепло, есть окно для проветривания.
+                <div class="border"></div>
+            </div>
+			
+			<br>
+            <div class="teh-video">
+				<iframe width="490" height="276" src="https://www.youtube-nocookie.com/embed/ggdIdPVjhqM?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe style="float: right;" width="490" height="276" src="https://www.youtube-nocookie.com/embed/RV9Mk8TaqFo?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+            <a href="/#cost" class="lnk-btn blue">Выбрать печь</a>
+            <div class="hr"></div>
+        </div>
+    </div>
+	<!--/noindex-->
+
+    <!-- block12 -->
+    <div class="block12" id="installation">
+        <div class="bottom-box">
+                <div class="arrow"></div>
+        </div>
+        <div class="limit">
+            <h2 class="h1 color-brown">Монтаж печи Горыныч 3</h2>
+            <div class="hr title"></div>
+            <a href="http://xn---3-glc4bem4c4ab.xn--p1ai/data/Instruction.pdf" target="_blank" class="load">Скачать инструкцию по установке печи</a>
+            <div class="contejner">
+                <div class="left column">
+                     <a class="fancybox point" href="/images/install/1.JPG" rel="gallery1">
+                            <img src="/images/install/1.JPG" alt="img"/>
+                     </a>
+                     <a class="fancybox point" href="/images/install/4.JPG" rel="gallery1">
+                            <img src="/images/install/4.JPG" alt="img"/>
+                     </a>
+                     <a class="fancybox point" href="/images/install/7.JPG" rel="gallery1">
+                            <img src="/images/install/7.JPG" alt="img"/>
+                     </a>
+                </div>
+                <div class="center column">
+                    <a class="fancybox point" href="/images/install/2.JPG" rel="gallery1">
+                            <img src="/images/install/2.JPG" alt="img"/>
+                     </a>
+                     <a class="fancybox point" href="/images/install/5.JPG" rel="gallery1">
+                            <img src="/images/install/5.JPG" alt="img"/>
+                     </a>
+                     <a class="fancybox point" href="/images/install/8.JPG" rel="gallery1">
+                            <img src="/images/install/8.JPG" alt="img"/>
+                     </a>
+                </div>
+                <div class="right column">
+                    <a class="fancybox point" href="/images/install/3.JPG" rel="gallery1">
+                            <img src="/images/install/3.JPG" alt="img"/>
+                     </a>
+                     <a class="fancybox point" href="/images/install/6.JPG" rel="gallery1">
+                            <img src="/images/install/6.JPG" alt="img"/>
+                     </a>
+                     <a class="fancybox point" href="/images/install/9.JPG" rel="gallery1">
+                            <img src="/images/install/9.JPG" alt="img"/>
+                     </a>
+                </div>
+                <div style="clear: both;"></div>
+
+				<br>
+				<div class="teh-text">
+					<p>Установить печь на заранее подготовленное бетонное основание.</p>
+
+					<p>В целях безопасности, категорически запрещено ставить печь на металлический лист.</p>
+
+					<p>Проверить наклон печи приложив уровень к топке и заднему борту, возможно не большое отклонение уровня печи. После установки замазать место прилегание топки к бетону с внешней стороны по периметру печи жаростойкой смесь (Суперкамин или другой ).</p>
+
+					<p>Кладку производить из полнотелого красного или желтого кирпича, запрещается обкладывать печь облицовочным кирпичом, в виду его низкой температуростойкости.</p>
+
+					<p>Кладку кирпича производить на термостойкий раствор Суперкамин или другой. Не обязательно использовать огнеупорный кирпич (этот кирпич для открытого огня, вполне подойдет красный полнотелый).</p>
+
+					<p>Минимальная ширина двери в бане 690 мм., заносить печь задней стенкой к полу, с полуразворотом каменки в проеме.</p>
+				</div>
+				<br>
+				
+            </div>
+        </div>
+    </div>
+
+    <!-- block13 -->
+    <div class="block13">
+        <div class="limit">
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/946DYjxdlq8" frameborder="0" allowfullscreen></iframe>
+            <a class="button brown" id="montag" href="#">Оставить заявку</a>
+            <div class="hr"></div>
+        </div>
+        <div class="bottom-box">
+                <div class="arrow"></div>
+        </div>
+    </div>
+
+    <!-- block14 -->
+    <div class="block14 map1" id="contact"> <!-- .map1 .map2 .map3 .map4-->
+         <div class="first map_location">
+         <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=M1_4r25xVLbY04DYRXntOh2jU3JHKG3l&width=100%&height=450"></script>
+         </div>
+         <div class="second map_location">
+         <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=OgzwSP-qNZJYE0Nl3UokcLYQ7qEKnDlh&width=100%&height=450"></script>
+         </div>
+         <div class="third map_location">
+         <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=CQn8cqUhiau4KeMKJicN14EvyBg08hre&width=100%&height=450"></script>
+         </div>
+         <div class="fourth map_location">
+         <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=OtMgUT7Wkqq7QuaOMN7Fw8dn9K77OsNn&width=100%&height=450"></script>
+         </div>
+            <div class="background">
+                <div class="contact-info">
+                    <div class="limit">
+                        <div class="h1">КОНТАКТНАЯ ИНФОРМАЦИЯ</div>
+                        <div class="hr title"></div>
+                    </div>
+                </div>
+                    <div class="limit">
+                        <div class="adress first"><span></span>г. Новосибирск, магазин «Банька», ул. Мичурина 24</div>
+                        <div class="adress second"><span></span>г. Челябинск, магазин Банькоff и Печка 74, г. Челябинск, ул. Индивидуальная 2А</div>
+                        <div class="adress third"><span></span>Нижний Новгород, магазин «Дымоход 52», ул. Ореховская 52</div>
+                        <div class="adress fourth"><span></span>Уфа, ул. Сарапульская, д. 73</div>
+                    </div>
+            </div>
+    </div>
+
+
+    <!-- FOOTER PUSH -->
+            <div class="footer-push"></div>
+</div>
+
+    <!-- footer -->
+    <footer>
+        <div class="limit">
+            <div class="social left">
+                <ul>
+                    <li><a class="icon1" href="#"></a></li>
+                    <li><a class="icon2" href="#"></a></li>
+                    <li><a class="icon3" href="#"></a></li>
+                    <li><a class="icon4" href="#"></a></li>
+                    <li><a class="icon5" href="#"></a></li>
+                </ul>
+                <div class="phone-info map1">  <!-- .map1 .map2 .map3 .map4-->
+                    <!-- <div class="first">
+                        8-800-2009-510<br />
+                        г. Новосибирск, магазин «Банька», ул. Мичурина 24
+                    </div>
+                    <div class="second">
+                        8-800-2009-510<br />
+                        г. Челябинск, магазин Банькоff и Печка 74, г. Челябинск, ул. Индивидуальная 2А
+                    </div>
+                    <div class="third">
+                        8-800-2009-510<br />
+                        Нижний Новгород, магазин «Дымоход 52», ул. Ореховская 52
+                    </div>
+                    <div class="fourth">
+                        8-347-275-09-32<br />
+                        Уфа, ул. Сарапульская, д. 73
+                    </div>-->
+					<div>
+                        <!--<span class="lptracker_phone"--><span class="roistat-phone-3">8 (905) 352-00-11</span><br />
+                        Уфа, ул. Сарапульская, д. 73
+					</div>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+        <ul class="nav">
+                <li><a href="/">Главная</a></li>
+               <li><a href="#chertezi">Чертежи</a></li>
+               <li><a href="#work">Принцип работы</a></li>
+                <li><a href="/#cost">Цены</a></li>
+                <li><a href="#installation">Монтаж</a></li>
+                <li><a href="/otzyvy/">Отзывы</a></li>
+				<li><a href="/video/">Видео</a></li>
+                <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </footer>
+
+<!-- MODAL -->
+<div id="modal" class="modal" style="display: none;">
+     <div class="modal-title">
+        <div class="h1">Оставьте заявку</div>
+     </div>
+     <div class="modal-content">
+        и получите бесплатную консультацию
+        <div class="orange-text"></div>
+        <form method="post" onsubmit="return sendOrder('confirm',this)">
+            <div class="field_set">
+                <input type="text" class="name" name="name" placeholder="ваше имя"/>
+                <div class="error">Поле запонено неверно</div>
+            </div>
+            <div class="field_set">
+                <input type="text" id="input-phone" class="phone" name="phone" placeholder="телефон"/>
+                <div class="error">Поле запонено неверно</div>
+            </div>
+            <input type="hidden" id="post_type" class="" name="post_type" value="" />
+        </form>
+        менеджер перезвонит вам в течение<br />
+        15 минут и уточнит детали
+
+        <a class="button brown" onclick="$(this).parents('.modal-content').find('form').submit();yaCounter43832879.reachGoal('callme');return true;" href="javascript:void(0)">Оставить заявку</a>
+     </div>
+</div>
+
+
+<div id="modal1" class="modal" style="display: none;">
+     <div class="modal-title">
+        <div class="h1">Встроенная система воздушного отопления</div>
+     </div>
+     <div class="modal-content">
+        <img src="/images/vsvo.jpg" alt="img"/>
+     </div>
+</div>
+
+<!-- End Document
+================================================== -->
+
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter43832879 = new Ya.Metrika({
+                    id:43832879,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    trackHash:true,
+                    ecommerce:"dataLayer"
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/43832879" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- ROISTAT BEGIN -->
+<script>
+(function(w, d, s, h, id) {
+    w.roistatProjectId = id; w.roistatHost = h;
+    var p = d.location.protocol == "https:" ? "https://" : "http://";
+    var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init";
+    var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+})(window, document, 'script', 'cloud.roistat.com', '8221a56d7360919e39ddd8da81f26de5');
+</script>
+<!-- ROISTAT END -->
+<!-- <script async type="text/javascript">function loadscript(e,t){var n=document.createElement("script");n.src="//lptracker.net.ru/"+e;n.onreadystatechange=t;n.onload=t;document.head.appendChild(n);return 1}var init_lstats=function(){lstats.site_id=24500;lstats.vk_catched = true;lstats.referer()};var jquery_lstats=function(){jQstat.noConflict();loadscript("stats_auto.js",init_lstats)};loadscript("jquery-1.10.2.min.js",jquery_lstats);</script> -->
+<link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
+<script type="text/javascript" src="https://cdn.envybox.io/widget/cbk.js?wcb_code=3dbb75cf83f40a37fd0546cbdf47eb63" charset="UTF-8" async></script>
+
+</body>
+</html>
