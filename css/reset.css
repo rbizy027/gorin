@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+/* Table of Content
+==================================================
+    #Font-Face
+	#Reset & Basics
+	#Typography
+	#Links
+	#Lists
+	#Images
+	#Forms
+    #Tables
+	#Other */
+
+
+/* #Font-Face
+================================================== */
+        
+	@font-face {
+    font-family: 'roboto-regular';
+    src: url('../fonts/RobotoCondensed-Regular.eot');
+    src: url('../fonts/RobotoCondensed-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/RobotoCondensed-Regular.woff2') format('woff2'),
+         url('../fonts/RobotoCondensed-Regular.woff') format('woff'),
+         url('../fonts/RobotoCondensed-Regular.ttf') format('truetype'),
+         url('../fonts/RobotoCondensed-Regular.svg#roboto-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
+    
+    @font-face {
+    font-family: 'roboto-bold';
+    src: url('../fonts/RobotoCondensed-Bold.eot');
+    src: url('../fonts/RobotoCondensed-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/RobotoCondensed-Bold.woff2') format('woff2'),
+         url('../fonts/RobotoCondensed-Bold.woff') format('woff'),
+         url('../fonts/RobotoCondensed-Bold.ttf') format('truetype'),
+         url('../fonts/RobotoCondensed-Bold.svg#roboto-bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
+    
+    @font-face {
+    font-family: 'roboto-medium';
+    src: url('../fonts/Roboto-Medium.eot');
+    src: url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Medium.woff2') format('woff2'),
+         url('../fonts/Roboto-Medium.woff') format('woff'),
+         url('../fonts/Roboto-Medium.ttf') format('truetype'),
+         url('../fonts/Roboto-Medium.svg#roboto-medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+
+
+
+/* #Reset & Basics 
+================================================== */
+    *{
+        margin:0;
+        padding:0;
+        border: 0;
+        vertical-align: baseline;
+        box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        -webkit-box-sizing:border-box;
+    }
+
+    body{
+    font-family: roboto-regular, Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: #362925;   
+    font-size: 15px;
+    min-width: 1070px;
+}
+    
+    
+
+/* #Typography
+================================================== */
+	h1, h2, h3, h4, h5, h6 {
+		color: #362925;
+		font-family: roboto-regular, Arial, Helvetica, sans-serif;
+		font-weight: normal;
+        text-rendering: optimizeLegibility; }
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { 
+	   font-weight: inherit; 
+       font-family: inherit;
+       font-size: inherit; }
+	h1 { font-size: 23px;}
+	h2 { font-size: 26px;}
+	h3 { font-size: 17px; font-family: roboto-bold; text-align: center; text-transform: uppercase;}
+	h4 { font-size: 15px;}
+	h5 { font-size: 13px;}
+	h6 { font-size: 14px; line-height: 14px; }
+    
+
+
+
+/* #Links
+================================================== */
+	a, 
+    a:visited,
+    a:hover, 
+    a:focus {  
+       text-decoration: none; 
+       outline: 0;
+         }
+
+
+/* #Lists
+================================================== */
+	ul { list-style: none outside; }
+	ol { list-style: decimal; }
+	li { display: inline-block; 
+         *display: inline;
+         *zoom:1; }
+
+
+/* #Images
+================================================== */
+
+	img {
+		max-width: 100%;
+        /*width: auto\9;*/
+        width:auto;
+		height: auto;
+        vertical-align: middle;
+        border: 0;
+        -ms-interpolation-mode: bicubic; }
+        
+
+/* #Forms
+================================================== */
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	textarea,
+	select {
+		border: 1px solid #ccc;
+		padding: 0 5px;
+		outline: none;
+		max-width: 100%;
+		display: block;
+		background: #fff;
+        vertical-align: baseline; 
+        *vertical-align: middle; }
+	
+	textarea {
+		min-height: 60px;
+        resize:none;
+        vertical-align: top;
+        overflow: auto; }
+            
+	input[type="checkbox"],
+    input[type="radio"] {
+		display: inline-block;
+        margin-right:5px; }
+        
+	button,
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"] {	
+	  text-decoration: none;
+      text-transform: none;
+	  cursor: pointer;
+      /*border:0 none;*/
+	  line-height: normal;
+      -webkit-appearance: none; 
+      cursor: pointer; 
+      *overflow: visible;   }
+      
+      
+	/* Fix for odd Mozilla border & padding issues */
+	button::-moz-focus-inner,
+	input::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+	}      
+	
+/* #Tables
+================================================== */
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      vertical-align: middle;
+    }
+    
+    caption, th, td {
+      text-align: center;
+      font-weight: normal;
+      vertical-align: middle;
+      float:none !important;
+    }
+    
+    caption, th{text-align: center}
+
+
+
+/* #Other
+================================================== */
+	:focus   { outline: 0; }
+    .left    { float: left !important; }
+    .right   { float: right !important; }
+    
+    .uppercase{text-transform: uppercase !important;}
+    .center{text-align: center!important}
+    sub, sup {
+      position: relative;
+      font-size: 75%;
+      line-height: 0;
+      vertical-align: baseline;
+    }
+    sup { top: -15px;}
+    sub { bottom: 2px;}
+    
+    .clearfix:before,
+    .clearfix:after {
+      content: ' ';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }   
+    
+    .clearfix {
+      zoom: 1; }
+    
